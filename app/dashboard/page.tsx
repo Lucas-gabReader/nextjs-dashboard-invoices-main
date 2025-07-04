@@ -3,8 +3,8 @@ import RevenueChart from '../ui/dashboard/revenue-chart';
 import { fetchRevenue, fetchLatestInvoices } from '@/app/lib/data';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 export default async function Page() {
-    // const revenue = await fetchRevenue();
-    // const latestInvoices = await fetchLatestInvoices();
+    const revenue = await fetchRevenue();
+    const latestInvoices = await fetchLatestInvoices();
     return (
         <main>
             <h1 className={`${lusitana.className} mb-4 text-xl md:text-2x1`}>
@@ -14,8 +14,8 @@ export default async function Page() {
 
             </div>
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-8">
-                {/* <RevenueChart revenue={revenue} />
-                <LatestInvoices latestInvoices={latestInvoices} /> */}
+                <RevenueChart revenue={revenue} />
+                <LatestInvoices latestInvoices={latestInvoices} />
             </div>
         </main>
     )
